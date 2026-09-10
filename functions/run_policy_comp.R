@@ -44,18 +44,18 @@ run_policy_comp <- function(params_comp, bau_results, incineration, consum_bau, 
                                 baseline_year_sr, 
                                 implement_year_sr)
   
-  rc_perc_comp <- calc_rc_perc(consum_comp, 
-                               policy_rate_rc, 
-                               target_year_rc, 
-                               implement_year_rc, 
-                               target_sector_rc, 
-                               baseline_rc)
+  rc_perc_comp <- calc_rc_perc(consum=consum_comp, 
+                               target_rc=policy_rate_rc, 
+                               target_year_rc=target_year_rc, 
+                               implement_year=implement_year_rc, 
+                               target_sector=target_sector_rc, 
+                               baseline_rc=baseline_rc)
 
 scrap_input_comp <- calc_scrap_input(rc_perc_comp,
                                       is_scrap_consump)
 
-avoid_virgin_comp <- calc_avoid_virgin(rc_perc_comp,
-                                       is_scrap_consump)
+# avoid_virgin_comp <- calc_avoid_virgin(rc_perc_comp,
+#                                        is_scrap_consump)
 
 
 
@@ -110,7 +110,7 @@ consum_comp_summary <- consum_comp |>
   filter(sector == 'all_sec') |>
   filter(year > implement_year_sr) 
 
-total_consumption_comp <-  sum(consum_comp_summary$mt_plastic_sr)
+total_consumption_comp <-  sum(consum_comp_summary$mt_plastic_policy)
 
 #avoided primary production 
 

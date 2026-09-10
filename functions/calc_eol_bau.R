@@ -23,12 +23,11 @@ calc_eol_bau <- function(wastegen, incineration, bau_rr, r_yield = 0.7, target_s
     mutate(rr_multiplier = mt_plastic_collected_total / mt_plastic_wastegen)
   
   
-  
   # apply rr for target sector, summarize amt collected by year
   annual_amt_collected <- wastegen |> 
     left_join(rr |> 
                 dplyr::select(sector, year, rr_multiplier), by = c('sector', 'year')) |> 
-    mutate(mt_plastic_collected = ifelse(!is.na(rr_multiplier), mt_plastic_wastegen * rr_multiplier, 0))  |> 
+    mutate(mt_plastic_collected = ifelse(!is.na(rr_multiplier), mt_plastic_wastegen * rr_multiplier, 0)) |> 
     group_by(year) |> 
     summarize(mt_plastic_collected = sum(mt_plastic_collected), .groups="drop")
   
@@ -44,8 +43,6 @@ calc_eol_bau <- function(wastegen, incineration, bau_rr, r_yield = 0.7, target_s
     left_join(incineration, by=c("year", "sector")) |> 
     mutate(mt_secondary_plastic_output = mt_plastic_collected * r_yield,
            mt_plastic_landfill = mt_plastic_wastegen-mt_secondary_plastic_output-mt_incin)
-  
-
   
   return(annual_eol)
 }

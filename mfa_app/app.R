@@ -544,7 +544,7 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
             width = 3,
             numericInput("target_rr", "Rate (%):", value = 0, min = 0, max = 100),
             selectInput("target_year_rr", "Target Year:", choices = 2026:2050, selected = 2030),
-            selectInput("implement_year_rr", "Implementation Year:", choices = 2025:2050, selected = 2026),
+            selectInput("implement_year_rr", "Implementation Year:", choices = 2024:2050, selected = 2026),
             br(), 
             actionButton("run_rr", "Model Policy", class = "btn-custom") # END Run Button
           ),
@@ -679,7 +679,7 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
             selectInput(
               "implement_year_rc",
               "Implementation Year:",
-              choices = 2026:2050,
+              choices = 2024:2050,
               selected = 2026
             ),
             br(),
@@ -815,7 +815,7 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
               column(2, numericInput("target_sr_comp", "Rate (%):", value = 0, min = 0, max = 100)),
               column(2, selectInput("baseline_year_sr_comp", "Baseline Year:", choices = 1950:2025, selected = 2023)),
               column(2, selectInput("target_year_sr_comp", "Target Year:", choices = 2026:2050, selected = 2030)),
-              column(2, selectInput("implement_year_sr_comp", "Implementation Year:", choices = 2026:2050, selected = 2026))
+              column(2, selectInput("implement_year_sr_comp", "Implementation Year:", choices = 2024:2050, selected = 2026))
             )
           ),
           
@@ -824,7 +824,7 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
             fluidRow(
               column(3, numericInput("target_rr_comp", "Rate (%):", value = 0, min = 0, max = 100)),
               column(3, selectInput("target_year_rr_comp", "Target Year:", choices = 2026:2050, selected = 2030)),
-              column(3, selectInput("implement_year_rr_comp", "Implementation Year:", choices = 2026:2050, selected = 2026)),
+              column(3, selectInput("implement_year_rr_comp", "Implementation Year:", choices = 2024:2050, selected = 2026)),
             )
           ),
           
@@ -833,7 +833,7 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
             fluidRow(
               column(3, numericInput("target_rc_comp", "Rate (%):", value = 0, min = 0, max = 100)),
               column(3, selectInput("target_year_rc_comp", "Target Year:", choices = 2026:2050, selected = 2030)),
-              column(3, selectInput("implement_year_rc_comp", "Implementation Year:", choices = 2026:2050, selected = 2026)),
+              column(3, selectInput("implement_year_rc_comp", "Implementation Year:", choices = 2024:2050, selected = 2026)),
             )
           ),
           br(), 
