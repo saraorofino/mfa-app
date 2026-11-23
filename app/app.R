@@ -553,8 +553,8 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
             width = 9,
             ### Model info ----------------------------
             h2("What is a recycling rate intervention?"),
-            h6("A recycling rate intervention involves a minimum target for the weight of material that is recycled. Recycling rate policies do not impact the total amount of plastic consumed. However, increasing recycling results in higher availability of secondary plastics which can be used to make new products and in turn decreases primary plastic production, use, and disposal.", 
-               br(),
+            h6("A recycling rate intervention involves a minimum target for the weight of material that is recycled. Recycling rate policies do not impact the total amount of plastic consumed. However, increasing recycling results in higher availability of secondary plastics which can be used to make new products and in turn decreases primary plastic production, use, and disposal. Recycling rate here is measured at the bale level, i.e., after collection losses, but before reprocessing losses.", 
+               br(), br(),
                "The recycling rate intervention is modeled as a linear increase in the recycling rate in the chosen sector between the implementation year and the target year, after which the target recycling rate has been reached. It includes the following customizable parameters:"), br(),
             h6(
               tags$ul(
@@ -975,10 +975,11 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
               "Holds producers financially responsible for improving California’s recycling and composting infrastructure."
             )
           ),
-          "SB 54, which passed in 2022,  is anticipated to begin implementation in 2026. The projected impacts of SB 54 are shown below. However legal pressures continue to threaten the program and may push back its implementation, and possibly target year."
-        ), br(), tags$li(
-          "Sb 54 intends to distinguish between avoidable and unavoidable yield losses in its recycling rate calculations. Since this is currently impossible due to insufficient data, recycling rate here is measured at the bale level, i.e., after collection losses, but before reprocessing losses."
-        ), br(), h6(
+          "SB 54, which passed in 2022, is anticipated to begin implementation in 2026. The projected impacts of SB 54 are shown below. However legal pressures continue to threaten the program and may push back its implementation, and possibly target year.",
+          br(), br(),
+            "The bill intends to distinguish between avoidable and unavoidable yield losses in its recycling rate calculations. Since this is currently impossible due to insufficient data, recycling rate here is measured at the bale level, i.e., after collection losses, but before reprocessing losses."
+          ),
+         br(), h6(
           "Use this tool to see how delays to this landmark legislation may impact the effectiveness of SB4 at reducing plastic production and waste."
         ), 
         ## Static SB 54 impacts ----------------------------------------------------
