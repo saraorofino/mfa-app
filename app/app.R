@@ -962,15 +962,25 @@ h6("The reduction is modeled as a linear decrease in the volume of plastic consu
       column(
         width = 9,
         
-        h2("What is California Sentate Bill 54?"),
-        h6("California’s Plastic Pollution Prevention and Packaging Producer Responsibility Act, Senate Bill 54 (SB 54):",
-           tags$ul(
-             tags$li("Mandates a 25% source reduction relative to the 2023 baseline year and a 65% recycling rate, for packaging by 2032."),
-             tags$li("Protects and restores lands, waters and communities most impacted by plastic pollution by requiring producers to pay $5 billion into an environmental mitigation fund."),
-             tags$li("Holds producers financially responsible for improving California’s recycling and composting infrastructure.")),
-           "SB 54, which passed in 2022,  is anticipated to begin implementation in 2026. The projected impacts of SB 54 are shown below. However legal pressures continue to threaten the program and may push back its implementation, and possibly target year."), br(),
-          h6("Use this tool to see how delays to this landmark legislation may impact the effectiveness of SB4 at reducing plastic production and waste."
-        ),
+        h2("What is California Sentate Bill 54?"), h6(
+          "California’s Plastic Pollution Prevention and Packaging Producer Responsibility Act, Senate Bill 54 (SB 54):",
+          tags$ul(
+            tags$li(
+              "Mandates a 25% source reduction relative to the 2023 baseline year and a 65% recycling rate, for packaging by 2032."
+            ),
+            tags$li(
+              "Protects and restores lands, waters and communities most impacted by plastic pollution by requiring producers to pay $5 billion into an environmental mitigation fund."
+            ),
+            tags$li(
+              "Holds producers financially responsible for improving California’s recycling and composting infrastructure."
+            )
+          ),
+          "SB 54, which passed in 2022,  is anticipated to begin implementation in 2026. The projected impacts of SB 54 are shown below. However legal pressures continue to threaten the program and may push back its implementation, and possibly target year."
+        ), br(), tags$li(
+          "Sb 54 intends to distinguish between avoidable and unavoidable yield losses in its recycling rate calculations. Since this is currently impossible due to insufficient data, recycling rate here is measured at the bale level, i.e., after collection losses, but before reprocessing losses."
+        ), br(), h6(
+          "Use this tool to see how delays to this landmark legislation may impact the effectiveness of SB4 at reducing plastic production and waste."
+        ), 
         ## Static SB 54 impacts ----------------------------------------------------
         
         h2(("Projected Impacts from CA SB54")),
